@@ -1,0 +1,275 @@
+/* Fonts mame */
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* Variables color*/
+
+:root {
+  --iris: #4d5ae5;
+  --navy-blue: #2e2f42;
+  --slate: #434455;
+  --ocean: #404bbf;
+  --cloud: #f4f4fd;
+  --white: #fff;
+  --cornflower: #e7e9fc;
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--slate);
+  background-color: var(--white);
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--iris);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+/* ----------------HEADER--------------- */
+
+.header {
+}
+.header-nav {
+}
+
+.logo-dark {
+  color: var(--navy-blue);
+}
+
+.header-nav-list {
+}
+.header-nav-item {
+}
+
+.header-nav-link {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--ocean);
+}
+
+.header-address {
+  font-style: normal;
+}
+.header-address-list {
+}
+.header-address-item {
+}
+.header-address-mail {
+}
+.header-address-phone {
+}
+
+.header-address-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.header-address-link:hover,
+.header-address-link:focus {
+  color: var(--ocean);
+}
+
+/* ----------------HERO--------------- */
+
+.hero {
+  background-color: var(--navy-blue);
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.hero-btn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  background-color: var(--iris);
+  cursor: pointer;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--ocean);
+}
+
+/* ----------------ADVANTEGES--------------- */
+
+.advantages {
+}
+.advantages-title-hidden {
+}
+.advantages-list {
+}
+.advantages-item {
+}
+.advantages-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+
+.advantages-descr {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* ----------------PROJECTS--------------- */
+
+.projects {
+}
+
+.projects-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+}
+
+.projects-list {
+}
+.projects-item {
+}
+.projects-img {
+}
+
+/* ----------------TEAM--------------- */
+
+.team {
+  background-color: var(--cloud);
+}
+
+.team-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+}
+
+.team-list {
+}
+
+.team-item {
+  background-color: var(--white);
+}
+
+.team-img {
+}
+
+.team-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+
+.team-descr {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* ----------------FOOTER--------------- */
+
+.footer {
+  background-color: var(--navy-blue);
+}
+
+.logo-light {
+  color: var(--cloud);
+}
+
+.footer-descr {
+  color: var(--cloud);
+}
+
+/* ----------------PORTFOLIO--------------- */
+
+.portfolio {
+}
+.portfolio-title-hidden {
+}
+.portfolio-list {
+}
+
+.portfolio-list-item {
+}
+
+.portfolio-link {
+}
+
+.portfolio-btn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--iris);
+  background-color: var(--cloud);
+  border: 1px solid var(--cornflower);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  background-color: var(--ocean);
+  color: var(--white);
+}
+
+.portfolio-projects {
+}
+.portfolio-projects-item {
+  background-color: var(--white);
+  border: 1px solid var(--cornflower);
+}
+.portfolio-img {
+}
+.portfolio-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+.portfolio-projects-descr {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
