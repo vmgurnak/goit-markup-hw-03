@@ -37,7 +37,7 @@ ul {
 }
 
 button {
-  /* border: none; */
+  border: none;
   cursor: pointer;
 }
 
@@ -200,7 +200,6 @@ body {
   background-color: var(--navy-blue);
   padding-top: 188px;
   padding-bottom: 188px;
-  text-align: center;
 }
 
 .hero-container {
@@ -209,14 +208,21 @@ body {
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--white);
 
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 48px;
 }
 
 .hero-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -224,6 +230,9 @@ body {
   letter-spacing: 0.04em;
   color: var(--white);
   background-color: var(--iris);
+
+  margin-left: auto;
+  margin-right: auto;
 
   padding: 16px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -333,8 +342,7 @@ body {
 
 .team-member {
   text-align: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
 }
 
 .team-subtitle {
@@ -356,11 +364,16 @@ body {
 
 .footer {
   background-color: var(--navy-blue);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .logo-light {
@@ -369,7 +382,6 @@ body {
 
 .footer-descr {
   color: var(--cloud);
-  margin-top: 16px;
   max-width: 264px;
 }
 
@@ -410,13 +422,14 @@ body {
   border: 1px solid var(--cornflower);
   border-radius: 4px;
 
-  padding: 11px 23px;
+  padding: 12px 24px;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--ocean);
   color: var(--white);
+  border: 1px solid transparent;
 }
 
 .portfolio-projects {
@@ -433,7 +446,7 @@ body {
 }
 
 .portfolio-completed {
-  padding: 31px 0 32px 15px;
+  padding: 32px 16px;
   border-right: 1px solid var(--cornflower);
   border-bottom: 1px solid var(--cornflower);
   border-left: 1px solid var(--cornflower);
