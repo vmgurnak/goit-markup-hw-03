@@ -2,7 +2,7 @@
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
-/* Variables color*/
+/* Variables*/
 
 :root {
   --iris: #4d5ae5;
@@ -14,12 +14,84 @@ font-family: 'Roboto', sans-serif; */
   --cornflower: #e7e9fc;
 }
 
+/* Reset styles */
+
+h1,
+h2,
+h3,
+p,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  /* border: none; */
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Base styles */
 
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--slate);
   background-color: var(--white);
+}
+
+/* [class*='container'] {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+} */
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 .logo {
@@ -33,19 +105,43 @@ body {
   color: var(--iris);
 }
 
-.link {
-  text-decoration: none;
-}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-.list {
-  list-style: none;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* ----------------HEADER--------------- */
 
 .header {
+  border-bottom: 1px solid var(--cornflower);
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header a {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav > a {
+  margin-right: 76px;
 }
 
 .logo-dark {
@@ -53,8 +149,11 @@ body {
 }
 
 .header-nav-list {
+  display: flex;
+  align-items: center;
 }
-.header-nav-item {
+.header-nav-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .header-nav-link {
@@ -71,10 +170,13 @@ body {
 
 .header-address {
   font-style: normal;
+  margin-left: auto;
 }
 .header-address-list {
+  display: flex;
 }
-.header-address-item {
+.header-address-item:not(:last-child) {
+  margin-right: 40px;
 }
 .header-address-mail {
 }
@@ -96,6 +198,12 @@ body {
 
 .hero {
   background-color: var(--navy-blue);
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
+}
+
+.hero-container {
 }
 
 .hero-title {
@@ -104,6 +212,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white);
+
+  margin-bottom: 48px;
 }
 
 .hero-btn {
@@ -114,7 +224,10 @@ body {
   letter-spacing: 0.04em;
   color: var(--white);
   background-color: var(--iris);
-  cursor: pointer;
+
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -126,11 +239,18 @@ body {
 
 .advantages {
 }
+
+.advantages-container {
+}
+
 .advantages-title-hidden {
 }
 .advantages-list {
+  display: flex;
+  gap: 24px;
 }
 .advantages-item {
+  flex-basis: calc((100%-24px * 3) / 4);
 }
 .advantages-subtitle {
   font-weight: 500;
@@ -138,6 +258,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
+
+  margin-bottom: 8px;
 }
 
 .advantages-descr {
@@ -148,6 +270,10 @@ body {
 /* ----------------PROJECTS--------------- */
 
 .projects {
+  padding-top: 0;
+}
+
+.projects-container {
 }
 
 .projects-title {
@@ -157,9 +283,13 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy-blue);
+
+  margin-bottom: 72px;
 }
 
 .projects-list {
+  display: flex;
+  gap: 24px;
 }
 .projects-item {
 }
@@ -172,6 +302,9 @@ body {
   background-color: var(--cloud);
 }
 
+.team-container {
+}
+
 .team-title {
   font-size: 36px;
   line-height: 1.11;
@@ -179,16 +312,29 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy-blue);
+
+  margin-bottom: 72px;
 }
 
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-item {
   background-color: var(--white);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-img {
+}
+
+.team-member {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team-subtitle {
@@ -197,6 +343,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
+
+  margin-bottom: 8px;
 }
 
 .team-descr {
@@ -210,21 +358,39 @@ body {
   background-color: var(--navy-blue);
 }
 
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .logo-light {
   color: var(--cloud);
 }
 
 .footer-descr {
   color: var(--cloud);
+  margin-top: 16px;
+  max-width: 264px;
 }
 
 /* ----------------PORTFOLIO--------------- */
 
 .portfolio {
+  padding-top: 96px;
 }
+
+.portfolio-container {
+}
+
 .portfolio-title-hidden {
 }
+
 .portfolio-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+
+  margin-bottom: 72px;
 }
 
 .portfolio-list-item {
@@ -243,7 +409,8 @@ body {
   background-color: var(--cloud);
   border: 1px solid var(--cornflower);
   border-radius: 4px;
-  cursor: pointer;
+
+  padding: 11px 23px;
 }
 
 .portfolio-btn:hover,
@@ -253,19 +420,33 @@ body {
 }
 
 .portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 .portfolio-projects-item {
   background-color: var(--white);
-  border: 1px solid var(--cornflower);
+  /* border: 1px solid var(--cornflower); */
 }
 .portfolio-img {
 }
+
+.portfolio-completed {
+  padding: 31px 0 32px 15px;
+  border-right: 1px solid var(--cornflower);
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
+}
+
 .portfolio-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
+
+  margin-bottom: 8px;
 }
 .portfolio-projects-descr {
   font-size: 16px;
